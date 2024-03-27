@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commission Portfolio</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+    <header>
+        <h1>Commission Portfolio</h1>
+    </header>
+    
+    <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#project">Project</a>
+        <a href="#Contact">Contact</a>
+      </div>
+      <div class="row">
+        <div class="data-col-mt-8"></div>
+      <div class="container">
+        <div id="home"></div>
+        <div class="main">
+            <div class="detail">
+                <div class="images">
+                    <img src="pfp.jpg" alt="avatar" class="avatar">
+                    <h1><span style="color:#2b99ff;">Ida Bagus Gede </span> Putra Anggada</h1>
+                <h3>Hi there, i'm using whatsapp.</h3>
+                <p>
+
+                    
+                </p>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="data-col-md-8"></div>
+<div class="project">
+    <center> <h1>My Projects</h1>
+    <p>These are my projects that i made lately</p></center>
+    <div id="project"></div>
+    <div class="portfolio-container">
+        <div class="project">
+            <div class="image-container">
+                <img src="project1.png" alt="Project 1 Image">
+                <div class="text-container">
+                    <p>Fearless part</p>
+                </div>
+            </div>
+            <div class="details" id="details1">
+                <p>This is a project for a New Year MEP on AMV Team</p>
+            </div>
+            <button class="toggle-details" data-target="details1" data-visible="false">Show Details</button>
+        </div>
+        <div class="project">
+            <div class="image-container">
+                <img src="project2.png" alt="Project 2 Image" height="">
+                <div class="text-container">
+                    <p>Comission</p>
+                </div>
+            </div>
+            <div class="details" id="details2">
+                <p>This project is for commission.</p>
+            </div>
+            <button class="toggle-details" data-target="details2" data-visible="false">Show Details</button>
+        </div>
+</div>
+<div class="portfolio-container">
+    <div class="project">
+        <div class="image-container">
+            <img src="project3.png" alt="Project 1 Image">
+            <div class="text-container">
+                <p>Style</p>
+            </div>
+        </div>
+        <div class="details" id="details1">
+            <p>I made this project when im bored</p>
+        </div>
+        <button class="toggle-details" data-target="details1" data-visible="false">Show Details</button>
+    </div>
+    <div class="project">
+        <div class="image-container">
+            <img src="project4.png" alt="Project 2 Image" height="">
+            <div class="text-container">
+                <p>I just wanna show you off</p>
+            </div>
+        </div>
+        <div class="details" id="details2">
+            <p>This project is for my yfe.</p>
+        </div>
+        <button class="toggle-details" data-target="details2" data-visible="false">Show Details</button>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".toggle-details").click(function () {
+                var targetId = $(this).data("target");
+                $("#" + targetId).slideToggle();
+
+                var isVisible = $(this).data("visible");
+                $(this).text(isVisible === "true" ? "Show Details" : "Hide Details");
+                $(this).data("visible", isVisible === "true" ? "false" : "true");
+            });
+        });
+    </script>
+    <div id="Contact"></div>
+    <center><a href="https://www.instagram.com/debqgus/"> <img src="ig.jpg" alt="logo" class="logo" height=""></a></center>
+</body>
+</html>
